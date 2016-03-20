@@ -2,14 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    Ember.$.ajaxSetup({
-       headers: {"Authorization": "Bearer demo_b8d3fb54a86b63641727eba34fd638ef",
-     "WEB-API-key": "0bca73a4-0ebb-4837-a841-7dcb189e9c02"}
-   });
-   Ember.$.getJSON('https://www.csas.cz/webapi/api/v1/netbanking/my/accounts').done(function( json ) {
-    console.log("JSON Data: " + JSON.stringify(json.accounts));
-    return(json.accounts);
-   });
+   return this.store.findAll('account');
  }
 });
 
