@@ -1,0 +1,9 @@
+<h3>Account list</h3>
+<ul>
+{{#each model as |pr|}}
+  <li>
+    {{pr.accountno.iban}}
+  </li>
+{{/each}}
+</ul>
+{{outlet}}
