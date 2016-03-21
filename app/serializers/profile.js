@@ -11,6 +11,6 @@ export default DS.JSONAPISerializer.extend({
         lastname: payload.lastname
       }
     }
-     }
+  };
    }
 });
