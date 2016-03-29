@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   productI18N: DS.attr('string'),
@@ -7,7 +8,7 @@ export default DS.Model.extend({
   balance: DS.attr(),
   flags: DS.attr(),
   actualBalance: Ember.computed('balance', function () {
-    var pom=Math.pow(.1,this.get('balance.precision'))*this.get('balance.value');
-    return(Math.round(pom * 100) / 100);
+    var pom=Math.pow(0.1,this.get('balance.precision'))*this.get('balance.value');
+    return(pom.toFixed(2));
   })
 });
