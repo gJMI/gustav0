@@ -1,0 +1,18 @@
+<div class="w3-row-padding">
+  {{#each model as |account|}}
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <header class="w3-container w3-blue">
+          <h4>{{account.productI18N}}</h4>
+        </header>
+        <div class="w3-container">
+          <p>{{account.accountno.iban}}</p>
+          <p>{{account.actualBalance}} {{account.balance.currency}}</p>
+        </div>
+        <footer class="w3-container w3-blue">
+          <h5>Tell me more</h5>
+        </footer>
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('accounts');
   this.route('profile');
+  this.route('overview');
   this.route('account',{ path: '/accounts/:id' });
 });
 
