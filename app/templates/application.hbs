@@ -1,6 +1,5 @@
-<h1>Gustav 0</h1>
-<h2>{{model.firstname}} {{model.lastname}}</h2>
+<h3><div class="w3-animate-left">Welcome {{model.firstname}} {{model.lastname}} in Gustav</div></h3>
 {{outlet}}
-{{#link-to "overview" mailbox current-when="overview"}}
+{{#link-to "overview" current-when="overview"}}
 {{/link-to}}
 This is a footer

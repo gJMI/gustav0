@@ -8,7 +8,8 @@ export default DS.JSONAPISerializer.extend({
       type: type.modelName,
       attributes: {
         firstname: payload.firstname,
-        lastname: payload.lastname
+        lastname: payload.lastname,
+        degree: payload.degree
       }
     }
   };

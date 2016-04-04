@@ -2,7 +2,7 @@
   {{#each model as |account|}}
     <div class="w3-third">
       <div class="w3-card-4">
-        <header class="w3-container w3-blue">
+        <header class="w3-container {{account.productColorClass}}">
           <h4>{{account.productI18N}}</h4>
         </header>
         <div class="w3-container">
@@ -13,7 +13,7 @@
                /{{account.accountno.bankCode}}</span></p>
           <p>{{account.actualBalance}} {{account.balance.currency}}</p>
         </div>
-        <footer class="w3-container w3-blue">
+        <footer class="w3-container {{account.productColorClass}}">
           <h5>Tell me more</h5>
         </footer>
       </div>
