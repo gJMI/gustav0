@@ -9,9 +9,8 @@
           <p class="w3-tooltip">{{format-iban account.accountno.iban}}
             <span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">
             {{#if (not-eq account.accountno.accountPrefix "0")}}
-             {{account.accountno.accountPrefix}}-{{/if}}{{account.accountno.accountNumber}}
-               /{{account.accountno.bankCode}}</span></p>
-          <p>{{account.actualBalance}} {{account.balance.currency}}</p>
+             {{account.accountno.accountPrefix}}-{{/if}}{{account.accountno.accountNumber}}/{{account.accountno.bankCode}}</span></p>
+          <p>{{format-currencyNumber account.actualBalance}} {{account.balance.currency}}</p>
         </div>
         <footer class="w3-container {{account.productColorClass}}">
           <h5>Tell me more</h5>
