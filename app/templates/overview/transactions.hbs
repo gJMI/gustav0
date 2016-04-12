@@ -4,7 +4,7 @@
   <li onclick="myFunction(this.id)" id={{pr.id}}>
       {{pr.description}}
       <span style="float:right;">{{format-currencyNumber pr.actualBalance}} {{pr.amount.currency}}</span>
-      <div name="{{pr.id}}" class="w3-accordion-content w3-container">
+      <div name="{{pr.id}}" class="w3-accordion-content w3-container w3-animate-zoom">
         <p>SS: {{pr.specificSymbol}} KS: {{pr.constantSymbol}} VS:{{variableSymbol}}</p>
     </div>
   </li>
