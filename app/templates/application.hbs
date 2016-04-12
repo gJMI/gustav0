@@ -1,5 +1,7 @@
 <h3><div class="w3-animate-left">Welcome {{model.firstname}} {{model.lastname}} in Gustav</div></h3>
-{{outlet}}
 {{#link-to "overview" current-when="overview"}}
 {{/link-to}}
-This is a footer
+{{outlet}}
+<div class="w3-container w3-border-top w3-border-red">
+  <p>Developed in 2016</p>
+</div>

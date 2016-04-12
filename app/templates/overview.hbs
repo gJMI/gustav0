@@ -13,7 +13,7 @@
           <p>{{format-currencyNumber account.actualBalance}} {{account.balance.currency}}</p>
         </div>
         <footer class="w3-container {{account.productColorClass}}">
-          <h5>Tell me more</h5>
+          <h5>{{#link-to "transactions" account.id}}Tell me more{{/link-to}}</h5>
         </footer>
       </div>
     </div>
