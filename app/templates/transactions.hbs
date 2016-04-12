@@ -1,0 +1,8 @@
+You are here
+{{#each model as |pr|}}
+  <li>
+    {{pr.description}} - {{pr.actualBalance}} {{pr.amount.currency}}
+  </li>
+{{/each}}
+
+{{outlet}}

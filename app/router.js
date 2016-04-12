@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('profile');
   this.route('overview');
   this.route('account',{ path: '/accounts/:id' });
-  this.route('transactions',{ path: '/accounts/:account/transactions' })
+  this.route('transactions',{ path: '/accounts/:id/transactions' });
 });
 
 export default Router;
