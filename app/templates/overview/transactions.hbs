@@ -1,0 +1,25 @@
+<h3>Your last transactions</h3>
+<ul class="w3-ul w3-hoverable w3-accordion">
+{{#each model as |pr|}}
+  <li onclick="myFunction(this.id)" id={{pr.id}}>
+      {{pr.description}}
+      <span style="float:right;">{{format-currencyNumber pr.actualBalance}} {{pr.amount.currency}}</span>
+      <div name="{{pr.id}}" class="w3-accordion-content w3-container">
+        <p>SS: {{pr.specificSymbol}} KS: {{pr.constantSymbol}} VS:{{variableSymbol}}</p>
+    </div>
+  </li>
+{{/each}}
+</ul>
+<script>
+function myFunction(id) {
+console.log(id);
+    var x = document.getElementsByName(id)[0];
+    console.log(x);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+{{outlet}}
