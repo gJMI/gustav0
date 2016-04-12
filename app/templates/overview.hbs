@@ -13,9 +13,18 @@
           <p>{{format-currencyNumber account.actualBalance}} {{account.balance.currency}}</p>
         </div>
         <footer class="w3-container {{account.productColorClass}}">
-          <h5>{{#link-to "transactions" account.id}}Tell me more{{/link-to}}</h5>
+          <h5>{{#link-to "overview.transactions" account.id}}<span onclick="document.getElementById('id01').style.display='block'">Tell me more</span>{{/link-to}}</h5>
         </footer>
       </div>
     </div>
   {{/each}}
+</div>
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-closebtn">&times;</span>
+      <p>{{outlet}}</p>
+    </div>
+  </div>
 </div>

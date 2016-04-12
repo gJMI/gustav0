@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-  namespace: '/webapi/api/v1/netbanking/my',
+  namespace: 'webapi/api/v1/netbanking/my',
   host: 'https://www.csas.cz',
   headers: {
     "WEB-API-key": "0bca73a4-0ebb-4837-a841-7dcb189e9c02",
