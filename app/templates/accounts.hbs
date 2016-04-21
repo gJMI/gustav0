@@ -2,7 +2,7 @@
 <ul>
 {{#each model as |pr|}}
   <li>
-    {{pr.productI18N}} - {{#link-to "accounts.transactions" pr.id}}{{pr.accountno.iban}}{{/link-to}} - {{format-currencyNumber pr.actualBalance}} {{pr.balance.currency}}
+    {{pr.productI18N}} - {{#link-to "accounts.transactions" pr.id}}{{pr.accountno.cz-iban}}{{/link-to}} - {{format-currencyNumber pr.actualBalance}} {{pr.balance.currency}}
   </li>
 {{/each}}
 </ul>

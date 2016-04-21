@@ -2,7 +2,7 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Model.extend({
-  "description": DS.attr('string'),
+  "reference": DS.attr('string'),
   "amount": DS.attr(),
   "constantSymbol": DS.attr(),
   "variableSymbol": DS.attr(),

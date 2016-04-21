@@ -6,10 +6,10 @@
           <h4>{{format-productName account.productI18N}}</h4>
         </header>
         <div class="w3-container">
-          <p class="w3-tooltip">{{format-iban account.accountno.iban}}
+          <p class="w3-tooltip">{{format-iban account.accountno.cz-iban}}
             <span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">
-            {{#if (not-eq account.accountno.accountPrefix "0")}}
-             {{account.accountno.accountPrefix}}-{{/if}}{{account.accountno.accountNumber}}/{{account.accountno.bankCode}}</span></p>
+            {{#if (eq account.accountno.prefix "")}}
+             {{account.accountno.prefix}}-{{/if}}{{account.accountno.number}}/{{account.accountno.bankCode}}</span></p>
           <p>{{format-currencyNumber account.actualBalance}} {{account.balance.currency}}</p>
         </div>
         <footer class="w3-container {{account.productColorClass}}">

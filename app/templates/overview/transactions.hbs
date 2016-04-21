@@ -2,7 +2,7 @@
 <ul class="w3-ul w3-hoverable w3-accordion">
 {{#each model as |pr|}}
   <li onclick="myFunction(this.id)" id={{pr.id}}>
-      {{pr.description}}
+      {{pr.reference}}
       <span style="float:right;">{{format-currencyNumber pr.actualBalance}} {{pr.amount.currency}}</span>
       <div name="{{pr.id}}" class="w3-accordion-content w3-container w3-animate-zoom">
         <p>SS: {{pr.specificSymbol}} KS: {{pr.constantSymbol}} VS:{{variableSymbol}}</p>

@@ -19,6 +19,11 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+  // ... other stuff here
+  'connect-src': "'self' https://george.csast.csas.cz"
+};
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

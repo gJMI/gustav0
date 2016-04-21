@@ -1,7 +1,7 @@
 You are here
 {{#each model as |pr|}}
   <li>
-    {{pr.description}} - {{format-currencyNumber pr.actualBalance}} {{pr.amount.currency}}
+    {{pr.reference}} - {{format-currencyNumber pr.actualBalance}} {{pr.amount.currency}}
   </li>
 {{/each}}
 
