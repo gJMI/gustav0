@@ -19,3 +19,4 @@ testem.log
 key.pem
 cert.pem
 .vscodeignore
+jsconfig.json

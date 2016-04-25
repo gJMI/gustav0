@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gustav0</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="black-cat.png">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gustav0</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="black-cat.png"> {{content-for "head"}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/w3.css">
+  <link rel="stylesheet" href="assets/vendor.css">
+  <link rel="stylesheet" href="assets/w3.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen">
+  <style>
+    html , body, h1, h2, h3, h4, h5 {
+      font-family: "Oxygen", sans-serif;
+    }
+  </style>
+  {{content-for "head-footer"}}
+</head>
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+<body>
+  {{content-for "body"}}
+  <div id="loading" class="w3-tag w3-large w3-padding w3-orange w3-margin-left">
+    <i class="fa fa-spinner fa-pulse w3-spin"></i> Loading the application… </div>
+  <script src="assets/vendor.js"></script>
+  <script src="assets/gustav0.js"></script>
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/gustav0.js"></script>
+  {{content-for "body-footer"}}
+</body>
 
-    {{content-for "body-footer"}}
-  </body>
 </html>
