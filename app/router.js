@@ -15,6 +15,7 @@ Router.map(function() {
   });
   this.route('account',{ path: '/accounts/:id' });
   this.route('transactions',{ path: '/accounts/:id/transactions' });
+  this.route('domestic');
 });
 
 export default Router;
