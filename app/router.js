@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('profile');
   this.route('overview',function() {
     this.route('transactions',{ path: '/:id/transactions' });
+    this.route('domestic',{ path: '/domestic' });
   });
   this.route('account',{ path: '/accounts/:id' });
   this.route('transactions',{ path: '/accounts/:id/transactions' });
