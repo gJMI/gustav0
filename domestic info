@@ -1,0 +1,75 @@
+https: //george.csast.csas.cz/api/webapi/v3/netbanking/my/orders/payments/domestic
+
+    {
+        "senderName": "Ing. Jiří Pánek",
+        "additionalInfo": {
+            "text4x35": ["redo"]
+        },
+        "flags": ["splitFees"],
+        "senderReference": "zpráva pro mě",
+        "transferDate": "2016-04-27",
+        "amount": {
+            "value": 100,
+            "currency": "CZK",
+            "precision": 2
+        },
+        "senderAccountName": "Ing. Jiří Pánek",
+        "sender": {
+            "bankCode": "0800",
+            "number": "144257083"
+        },
+        "receiver": {
+            "number": "19",
+            "bankCode": "2700"
+        },
+        "receiverName": "Test",
+        "symbols": {}
+    }
+
+
+
+{
+    "id": "160427961563099",
+    "additionalInfo": {
+        "text4x35": ["redo"]
+    },
+    "amount": {
+        "value": 100,
+        "precision": 2,
+        "currency": "CZK"
+    },
+    "applicationId": "GEORGE",
+    "channelId": "NET_BANKING",
+    "cz-orderingDate": "2016-04-27T06:33:18+02:00",
+    "executionDate": "2016-04-27T00:00:00+02:00",
+    "flags": ["editable", "deletable"],
+    "modificationDate": "2016-04-27T06:33:18+02:00",
+    "orderCategory": "DOMESTIC",
+    "orderType": "PAYMENT_OUT",
+    "receiver": {
+        "number": "19",
+        "bankCode": "2700",
+        "countryCode": "CZ",
+        "cz-iban": "CZ6327000000000000000019",
+        "cz-bic": "GIBACZPX"
+    },
+    "receiverName": "Test",
+    "referenceId": "R4HX25UJDYV",
+    "sender": {
+        "number": "144257083",
+        "bankCode": "0800",
+        "countryCode": "CZ",
+        "cz-iban": "CZ2108000000000144257083",
+        "cz-bic": "GIBACZPX"
+    },
+    "senderName": "Ing. Jiří Pánek",
+    "senderReference": "zpráva pro mě",
+    "signInfo": {
+        "state": "OPEN",
+        "signId": "d6aec6892e74b72f8af98038af047fd0b4aefef4c05475e81b9bd9144914b6a9"
+    },
+    "state": "OPEN",
+    "stateDetail": "OPN",
+    "stateOk": true,
+    "transferDate": "2016-04-27"
+}
