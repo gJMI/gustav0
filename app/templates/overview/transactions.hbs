@@ -23,3 +23,130 @@ console.log(id);
 }
 </script>
 {{outlet}}
+
+
+/*
+GET /api/webapi/v2/gapi/my/transactions?pageSize=50&id=AA0639BF461DDB2B2DBCB6AEC715A7CFDEC07227&_=1462944790831 HTTP/1.1
+
+{
+  "collection" : [ {
+    "id" : "100000544849031",
+    "sender" : {
+      "iban" : "CZ3608000000002143418083",
+      "bic" : "GIBACZPX",
+      "number" : "2143418083",
+      "bankCode" : "0800",
+      "prefix" : "000000",
+      "countryCode" : ""
+    },
+    "senderName" : "Jana Králová",
+    "senderReference" : "",
+    "receiver" : {
+      "iban" : "CZ5008001800560033125686",
+      "bic" : null,
+      "number" : "0033125686",
+      "bankCode" : "0800",
+      "prefix" : "180056",
+      "countryCode" : ""
+    },
+    "receiverName" : "",
+    "receiverReference" : "",
+    "amount" : {
+      "value" : -300000,
+      "precision" : 2,
+      "currency" : "CZK"
+    },
+    "amountSender" : null,
+    "amountAccounting" : null,
+    "bookingDate" : 1460152800000,
+    "valuationDate" : 1460152800000,
+    "importDate" : 1462453085364,
+    "inputDate" : 1460152800000,
+    "dueDate" : 1460152800000,
+    "exchangeDate" : null,
+    "insertTimestamp" : 1460242684776,
+    "reference" : "0409540109584",
+    "originatorSystem" : "UNKNOWN",
+    "additionalTexts" : {
+      "text1" : null,
+      "text2" : null,
+      "text3" : null,
+      "lineItems" : [ "" ],
+      "constantSymbol" : "1559",
+      "variableSymbol" : null,
+      "specificSymbol" : "4511613338"
+    },
+    "note" : null,
+    "bookingType" : "2",
+    "bookingTypeTranslation" : "výběr hotovosti ATM",
+    "orderRole" : "SENDER",
+    "flags" : [ "IS_VISIBLE", "IS_BAL_RELEVANT" ],
+    "cardId" : "",
+    "maskedCardNumber" : "",
+    "invoiceId" : null,
+    "transactionDate" : 1460152800000,
+    "location" : "",
+    "foreignExchangeFee" : null,
+    "transactionFee" : null,
+    "exchangeRateValue" : null,
+    "exchangeRatePrecision" : null,
+    "cardType" : null,
+    "mcc" : null,
+    "country" : null,
+    "paymentType" : null,
+    "partnerName" : "",
+    "partner" : {
+      "iban" : "CZ5008001800560033125686",
+      "bic" : null,
+      "number" : "0033125686",
+      "bankCode" : "0800",
+      "prefix" : "180056",
+      "countryCode" : ""
+    },
+    "partnerData" : null,
+    "logo" : null,
+    "owner" : "AA0639BF461DDB2B2DBCB6AEC715A7CFDEC07227",
+    "txType" : "ATM",
+    "txDirection" : "OUTGOING",
+    "cardInfo" : null,
+    "atmData" : null,
+    "posData" : null,
+    "tags" : [ ],
+    "attachment" : null,
+    "saving" : {
+      "sharePrice" : null,
+      "nonInvested" : null,
+      "paidAnnuity" : null,
+      "paidInterest" : null,
+      "numberOfSharesTraded" : {
+        "value" : null,
+        "precision" : null
+      },
+      "membershipFund" : ""
+    },
+    "additionalData" : {
+      "customerId" : null,
+      "tags" : null,
+      "marked" : false
+    },
+    "categories" : [ {
+      "mainCategory" : "WITHDRAWAL",
+      "subCategory" : "ATM_WITHDRAWAL",
+      "amount" : {
+        "value" : -300000,
+        "precision" : 2,
+        "currency" : "CZK"
+      },
+      "hidden" : false
+    } ],
+    "categorizationSource" : {
+      "type" : "GLOBAL_RULE",
+      "content" : "{\n  \"keyword\" : \"atm\",\n  \"hidden\" : false,\n  \"subCategory\" : \"ATM_WITHDRAWAL\"\n}"
+    },
+    "transactionType" : null,
+    "paymentReference" : "",
+    "similarityKey" : "9147C5B158EF258628E20C454C7F235E",
+    "taxPayments" : null
+  }, {
+
+*/
