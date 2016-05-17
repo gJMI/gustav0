@@ -11,11 +11,21 @@
 
   <link rel="stylesheet" href="assets/vendor.css">
   <link rel="stylesheet" href="assets/w3.css">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen">
-  <style>
-    html , body, h1, h2, h3, h4, h5 {
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+ <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       font-family: "Oxygen", sans-serif;
+      font-weight: 400;
+    }
+    b, strong {
+      font-weight: 700;
     }
   </style>
   {{content-for "head-footer"}}
@@ -23,9 +33,9 @@
 
 <body>
   {{content-for "body"}}
-  <div class="w3-content style="max-width:500px"">
+  <div class="w3-content style="max-width:500px">
     <div id="loading" class="w3-tag w3-large w3-padding w3-orange w3-margin-left">
-    <i class="fa fa-spinner fa-pulse w3-spin"></i> Loading the application… </div>
+      <i class="fa fa-spinner fa-pulse w3-spin"></i> Loading the application… </div>
   </div>
   <script src="assets/vendor.js"></script>
   <script src="assets/gustav0.js"></script>
@@ -33,4 +43,4 @@
   {{content-for "body-footer"}}
 </body>
 
-</html>
+</html></html>

@@ -7,6 +7,8 @@ export default DS.Model.extend({
   "constantSymbol": DS.attr(),
   "variableSymbol": DS.attr(),
   "specificSymbol": DS.attr(),
+  "dueDate": DS.attr('date'),
+  "bookingTypeTranslation": DS.attr(),
   actualBalance: Ember.computed('amount', function () {
     console.log("actual balance computed");
     var pom=Math.pow(0.1,this.get('amount.precision'))*this.get('amount.value');
