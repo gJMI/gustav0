@@ -10,7 +10,7 @@ export default ApplicationAdapter.extend({
     
     console.log("account" + account);
     
-    var url = `${this.host}/api/webapi/v2/gapi/my/transactions?pageSize=50&id=${account}`;
+    var url = `${this.host}/api/webapi/v2/gapi/my/transactions?pageSize=25&id=${account}`;
 
     var key = this.headers["WEB-API-key"];
     var auth = this.headers["Authorization"];
