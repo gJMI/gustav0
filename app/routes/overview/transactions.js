@@ -7,10 +7,11 @@ export default Ember.Route.extend({
   },
   beforeModel: function() {
     // Assume the 'loading' class displays an overlay with a loading animation
-    Ember.$("#loading").css("display", "block");
+    Ember.$("#id02").css("display", "block");
+    console.log("pre-F2");
   },
   afterModel: function() {
     console.log("F2");
-    Ember.$("#loading").css("display", "none");
+    Ember.$("#id02").css("display", "none");
   }
 });
