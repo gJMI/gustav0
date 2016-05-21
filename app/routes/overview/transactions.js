@@ -6,12 +6,12 @@ export default Ember.Route.extend({
    return this.store.query('transaction', query);
   },
   beforeModel: function() {
-    // Assume the 'loading' class displays an overlay with a loading animation
-    Ember.$("#id02").css("display", "block");
-    console.log("pre-F2");
+    // Display loading message
+    Ember.$("#modal02").css("display", "block");
+    Ember.Logger.debug("pre-F2");
   },
   afterModel: function() {
-    console.log("F2");
-    Ember.$("#id02").css("display", "none");
+    Ember.Logger.debug("F2");
+    Ember.$("#modal02").css("display", "none");
   }
 });

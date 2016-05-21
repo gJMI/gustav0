@@ -4,8 +4,8 @@ export default Ember.Route.extend({
 
     actions: {
         sendDomestic(order) {
-            console.log(order);
-            console.log("Number" + order.get('transferDate'));
+            Ember.Logger.debug("Order: "+order);
+            Ember.Logger.debug("Transfer date: " + order.get('transferDate'));
             var x=this.store.createRecord('domestic', {
                 sender: {
                   number: order.get('senderAccount'),
@@ -24,7 +24,7 @@ export default Ember.Route.extend({
                 senderName: 'Sender name',
                 receiverName: 'Receiver name'
             });
-            x.save();
+            x.save(); // emit POST
         }
     },
 });

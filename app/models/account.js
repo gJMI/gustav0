@@ -13,8 +13,8 @@ export default DS.Model.extend({
     return(pom.toFixed(2));
   }),
   productColorClass: Ember.computed('product', function() {
-    var pom="w3-blue";
-    console.log(this.get('product'));
+    var pom="w3-blue"; //default coloer
+    Ember.Logger.debug("Product: " + this.get('product'));
     switch(this.get('product')) {
       case 12: pom="w3-yellow";break; //card account
       case 10: pom="w3-green";break; //loan account

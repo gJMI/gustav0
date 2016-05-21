@@ -1,8 +1,9 @@
+import Ember from 'ember';
 import Base from 'ember-validations/validators/base';
 
 export default Base.extend({
   call: function () {
-   console.log("Running mod11 with " + this.model.get(this.property));
+    Ember.Logger.debug("Running mod11 with " + this.model.get(this.property));
     var CI = this.model.get(this.property);
     var ret = "Not a number"; //N-cislo0,C-cislo,E-chyba
     var vahy = new Array("1", "2", "4", "8", "5", "10", "9", "7", "3", "6");

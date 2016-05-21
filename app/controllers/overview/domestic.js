@@ -9,10 +9,10 @@ export default Ember.Controller.extend(EmberValidations, {
     },
     actions: {
         selectSenderAccount: function (acc) {
-            console.log('123 something changed ' + acc);
+            Ember.Logger.debug('Account selection changed ' + acc);
             var model = this.get('model');
             model.set("accountSender", acc);
-            console.log('123 model ' + model.get("accountSender"));
+            Ember.Logger.debug('Account model selected' + model.get("accountSender"));
         },
         sendDomestic: function () {
 
@@ -37,14 +37,14 @@ export default Ember.Controller.extend(EmberValidations, {
 
             payload.transferDate = model.get("transferDate");
 
-            console.log("11 Model payload: " + JSON.stringify(payload));
+            Ember.Logger.debug("Domestic Model payload: " + JSON.stringify(payload));
 
             var domestic = this.store.createRecord('domestic', payload);
             domestic.save().then(function() {
-                console.log('Transition to overview');
-                Ember.$("#id01").css("display", "none");
-                //self.transitionToRoute('overview');
-            }).catch(console.log("47 Something is wrong")); //.catch(console.log("error occured"));
+                Ember.Logger.debug('Transition to overview');
+                Ember.$("#modal01").css("display", "none");
+                this.transitionToRoute('overview');
+            }).catch(console.log("Something wrong happened in domestic")); //.catch(console.log("error occured"));
         }
     }
 });
