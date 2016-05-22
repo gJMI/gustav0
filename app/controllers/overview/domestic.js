@@ -16,6 +16,13 @@ export default Ember.Controller.extend(EmberValidations, {
         },
         sendDomestic: function () {
 
+            this.validate().then(()=>{
+               Ember.Logger.debug("Validations ok");
+               // put save here 
+            }).catch(()=>{
+               Ember.Logger.debug("Validations nok"); 
+            });
+            
             var payload = {};
             var model = this.get("model");
 
@@ -40,10 +47,13 @@ export default Ember.Controller.extend(EmberValidations, {
             Ember.Logger.debug("Domestic Model payload: " + JSON.stringify(payload));
 
             var domestic = this.store.createRecord('domestic', payload);
+            
+            
+            
             domestic.save().then(function() {
                 Ember.Logger.debug('Transition to overview');
                 Ember.$("#modal01").css("display", "none");
-                this.transitionToRoute('overview');
+                this.transitionToRoute('overview',model);
             }).catch(console.log("Something wrong happened in domestic")); //.catch(console.log("error occured"));
         }
     }

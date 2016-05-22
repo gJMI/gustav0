@@ -6,11 +6,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('overview',function() {
-    this.route('transactions',{ path: '/:id/transactions' });
-    this.route('domestic',{ path: '/domestic' });
-  });
-  this.route('about');
 });
 
 export default Router;
