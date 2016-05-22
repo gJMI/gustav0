@@ -3,7 +3,7 @@ import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations, {
     validations: {
-        'senderAccount': {
+        "model.senderAccount": {
             presence: true
         }
     },

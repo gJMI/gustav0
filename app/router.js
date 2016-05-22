@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('transactions',{ path: '/:id/transactions' });
     this.route('domestic',{ path: '/domestic' });
   });
+  this.route('about');
 });
 
 export default Router;
