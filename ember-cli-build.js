@@ -7,7 +7,7 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  //app.import('gustav0/scripts/helper.js',{ destDir: 'assets' });
+  app.import('gustav0/scripts/helper.js');
   
   // Use `app.import` to add additional libraries to the generated
   // output files.
