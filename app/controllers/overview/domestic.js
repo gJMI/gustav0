@@ -19,7 +19,7 @@ export default Ember.Controller.extend(EmberValidations, {
             this.validate().then(()=>{
                Ember.Logger.debug("Validations ok");
                // put save here 
-            }).catch(()=>{
+            }.bind(this)).catch(()=>{
                Ember.Logger.debug("Validations nok"); 
             });
             
@@ -53,8 +53,10 @@ export default Ember.Controller.extend(EmberValidations, {
             domestic.save().then(function() {
                 Ember.Logger.debug('Transition to overview');
                 Ember.$("#modal01").css("display", "none");
-                this.transitionToRoute('overview',model);
-            }).catch(console.log("Something wrong happened in domestic")); //.catch(console.log("error occured"));
+                this.transitionToRoute('overview');
+                console.log(this);
+                
+            }.bind(this)).catch(console.log("Something wrong happened in domestic"));
         }
     }
 });
