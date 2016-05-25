@@ -8,7 +8,7 @@ export default ApplicationAdapter.extend({
     
     var account = query["account"];
     
-    console.log("account" + account);
+    Ember.Logger.debug("account" + account);
     
     var url = `${this.host}/api/webapi/v2/gapi/my/transactions?pageSize=25&id=${account}`;
 
@@ -17,7 +17,7 @@ export default ApplicationAdapter.extend({
 
     return new Ember.RSVP.Promise(function (resolve, reject) {
 
-      console.log("HEAD: " + auth + key);
+      Ember.Logger.debug("HEAD: " + auth + key);
 
       Ember.$.ajaxSetup({
         beforeSend: function (xhr) {
@@ -32,7 +32,7 @@ export default ApplicationAdapter.extend({
 
         payload.transactions = data.collection;
 
-        console.log("payload: " + JSON.stringify(payload));
+        //Ember.Logger.debug("Payload: " + JSON.stringify(payload));
 
         Ember.run(null, resolve, payload);
 
