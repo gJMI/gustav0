@@ -54,9 +54,9 @@ export default Ember.Controller.extend(EmberValidations, {
                 Ember.Logger.debug('Transition to overview');
                 Ember.$("#modal01").css("display", "none");
                 this.transitionToRoute('overview');
-                console.log(this);
+                Ember.Logger.debug(this);
                 
-            }.bind(this)).catch(console.log("Something wrong happened in domestic"));
+            }.bind(this)).catch(Ember.Logger.warn("Something wrong happened in domestic"));
         }
     }
 });

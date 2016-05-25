@@ -1,6 +1,7 @@
 //main menu helper
 
 /*jshint unused:false*/
+/*globals Ember */
 
 function w3_open() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
@@ -13,9 +14,9 @@ function w3_close() {
 
 
 function modalDisposal(id) {
-    console.log(id);
+    Ember.Logger.debug(id);
     var x = document.getElementsByName(id)[0];
-    console.log(x);
+    Ember.Logger.debug(x);
     if (x.className.indexOf("w3-show") === -1) {
         x.className += " w3-show";
     } else {
