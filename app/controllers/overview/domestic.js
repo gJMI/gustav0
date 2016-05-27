@@ -2,8 +2,13 @@ import Ember from 'ember';
 import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations, {
+    showErrors: false,
     validations: {
-        "model.senderAccount": {
+        "model.receiverAccount": {
+            presence: true,
+            mod11: true
+        },
+        "model.accountSender": {
             presence: true
         }
     },
@@ -20,8 +25,10 @@ export default Ember.Controller.extend(EmberValidations, {
                Ember.Logger.debug("Validations ok");
                // put save here 
             }.bind(this)).catch(()=>{
-               Ember.Logger.debug("Validations nok"); 
-            });
+               Ember.Logger.debug("Validations nok");
+               Ember.Logger.debug(this.get("errors"));
+               this.set('showErrors',true); 
+            }.bind(this));
             
             var payload = {};
             var model = this.get("model");
@@ -48,14 +55,13 @@ export default Ember.Controller.extend(EmberValidations, {
 
             var domestic = this.store.createRecord('domestic', payload);
             
+            Ember.Logger.debug("Validation state: " + model.get('isValid'));
             
-            
-            domestic.save().then(function() {
+            domestic.save().then(()=> {
                 Ember.Logger.debug('Transition to overview');
                 Ember.$("#modal01").css("display", "none");
                 this.transitionToRoute('overview');
-                Ember.Logger.debug(this);
-                
+                Ember.Logger.debug(this);             
             }.bind(this)).catch(Ember.Logger.warn("Something wrong happened in domestic"));
         }
     }

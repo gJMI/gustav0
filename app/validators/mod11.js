@@ -5,6 +5,10 @@ export default Base.extend({
   call: function () {
     Ember.Logger.debug("Running mod11 with " + this.model.get(this.property));
     var CI = this.model.get(this.property);
+    if (!CI) {
+      this.errors.pushObject("Mod11 property is undef");
+      return;
+    }
     var ret = "Not a number"; //N-cislo0,C-cislo,E-chyba
     var vahy = new Array("1", "2", "4", "8", "5", "10", "9", "7", "3", "6");
     var suma = 0;
@@ -24,12 +28,14 @@ export default Base.extend({
       j++;
     }
     if ((suma % 11) === 0) {
-      ret = ret + "M";
+      ret = "M";
     } else {
-      ret = ret + "E";
+      ret = "E";
+      this.errors.pushObject("Not a banking modulo 11 account number");
     }
 
-    this.errors.pushObject("Mod11" + ret);
+    Ember.Logger.debug("Mod11 " + ret);
+    
 
   }
 });
