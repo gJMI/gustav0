@@ -1,29 +1,50 @@
-<h3>Your domestic payment</h3>
-<form {{action "sendDomestic" model on="submit" }}>
-    <div class="w3-row-padding w3-section">
-        <label>Sender account</label>
-        <select class="w3-select" name="option" onchange={{action "selectSenderAccount" value="target.value" }}>
-  <option value="" disabled selected>Choose your sender account</option>
-  {{#each model as |account|}}
-     <option value="{{format-account account.accountno.cz-iban}}">{{format-iban account.accountno.cz-iban}} ({{format-account account.accountno.cz-iban}}/{{account.accountno.bankCode}})</option>
-  {{/each}}
-  </select>
-  {{display-error errors=errors.model.accountSender showErrors=showErrors}}
-    </div>
+<div class="w3-modal" style='display:block'>
+    <div class="w3-modal-content">
+        <div class="w3-container w3-row-padding w3-section">
+            <span class="w3-closebtn">{{#link-to "overview"}}<i class="fa fa-close"></i>{{/link-to}}</span>
 
-    <div class="w3-row-padding w3-section">
-        <div class="w3-twothird">
-            <label>Receiver account</label>
-            <div class="w3-red">{{errors.mod11}}</div>{{input type="text" class="w3-input" id="receiverAccount" value=model.receiverAccount}}
-            {{display-error errors=errors.model.receiverAccount showErrors=showErrors}}
-        </div>
-        <div class="w3-third">
-            <label>Receiver bankcode</label> {{input type="number" class="w3-input" id="receiverBankCode" value=model.receiverBankCode}}
+            <h3>Your domestic payment</h3>
+
+            <form {{action "sendDomestic" model on="submit" }}>
+                <div class="w3-row-padding w3-section">
+                    
+                    <label>Sender account</label>
+                        <select class="w3-select" name="option" onchange={{action "selectSenderAccount" value="target.value" }}>
+                            <option value="" disabled selected>Choose your sender account</option>
+                            {{#each model as |account|}}
+                                <option value="{{format-account account.accountno.cz-iban}}">{{format-iban account.accountno.cz-iban}} ({{format-account account.accountno.cz-iban}}/{{account.accountno.bankCode}})</option>
+                            {{/each}}
+                        </select>
+                    {{display-error errors=errors.model.accountSender showErrors=showErrors}}
+                </div>
+
+                <div class="w3-row-padding w3-section">
+                    <div class="w3-twothird">
+                        <label>Receiver account</label>
+                        {{input type="text" class="w3-input" id="receiverAccount" value=model.receiverAccount}}
+                        {{display-error errors=errors.model.receiverAccount showErrors=showErrors}}
+                    </div>
+                    <div class="w3-third">
+                        <label>Receiver bankcode</label>
+                        {{input type="number" class="w3-input" id="receiverBankCode" value=model.receiverBankCode}}
+                        {{display-error errors=errors.model.receiverBankCode showErrors=showErrors}}
+                    </div>
+                </div>
+                
+                <div class="w3-row-padding w3-section">
+                    <label>Transfer date</label>
+                    {{input type="date" class="w3-input" min="2016-05-27" id="transferDate" value=model.transferDate}}
+                    {{display-error errors=errors.model.transferDate showErrors=showErrors}}
+                </div>
+                
+                <div class="w3-row-padding w3-section">
+                    <label>Amount</label> {{input type="text" class="w3-input" id="amountValue" value=model.amountValue}}
+                    {{display-error errors=errors.model.amountValue showErrors=showErrors}}
+                </div>
+                               
+                <p><button type=submit class="w3-btn w3-blue">Send</button></p>
+            </form>
+            {{outlet}}
         </div>
     </div>
-
-    <div class="w3-row-padding w3-section"><label>Transfer date</label> {{input type="date" class="w3-input" id="transferDate" value=model.transferDate}}</div>
-    <div class="w3-row-padding w3-section"><label>Amount</label> {{input type="text" class="w3-input" id="amountValue" value=model.amountValue}}</div>
-    <button type=submit class="w3-btn w3-blue">Send</button> 
-</form>
-{{outlet}}
+</div>
