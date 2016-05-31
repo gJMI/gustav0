@@ -1,10 +1,10 @@
 <nav class="w3-sidenav w3-dark-grey w3-animate-left" style="display:none">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close <i class="fa fa-close"></i></a>
-  {{#link-to "overview.domestic"}}<span onclick="w3_close();">Payment order</span>{{/link-to}}
-  {{#link-to "overview"}}<span onclick="w3_close();">Overview</span>{{/link-to}}
-  <a href="javascript:void(0)" onclick="setLanguage('cs')"><div class="phoca-flag" style="width:25px;height:25px"><span class="phoca-flag cz"></span></div> {{t "lang.cs"}}</a>
-  <a href="javascript:void(0)" onclick="{{action "setLanguage" value="en" }}"><div class="phoca-flag" style="width:25px;height:30px"><span class="phoca-flag gb"></span></div> {{t "lang.en"}}</a>
-  {{#link-to "about"}}<span onclick="w3_close();">About</span>{{/link-to}}
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">{{t "app.close"}} <i class="fa fa-close"></i></a>
+  {{#link-to "overview.domestic"}}<span onclick="w3_close();">{{t "app.paymentOrder"}}</span>{{/link-to}}
+  {{#link-to "overview"}}<span onclick="w3_close();">{{t "app.overview"}}</span>{{/link-to}}
+  <a href="javascript:void(0)" onclick={{action "setLanguage" "cs"}}><div class="phoca-flagbox" style="width:25px;height:25px"><span class="phoca-flag cz"></span></div> {{t "lang.cs"}}</a>
+  <a href="javascript:void(0)" onclick={{action "setLanguage" "en"}}><div class="phoca-flagbox" style="width:25px;height:25px"><span class="phoca-flag us"></span></div> {{t "lang.en"}}</a>
+  {{#link-to "about"}}<span onclick="w3_close();">{{t "app.about"}}</span>{{/link-to}}
 </nav>
 
 
@@ -13,7 +13,7 @@
   <span class="w3-opennav w3-xlarge" onclick="w3_open()"><i class="fa fa-bars"></i></span>
 
   <h3><div class="w3-container w3-animate-left w3-pale-blue w3-leftbar w3-border-blue">
-    {{t "user.welcome" firstname=model.firstname lastname=model.lastname}}
+    {{t "user.welcome" firstname=model.firstname lastname=model.lastname salutation=model.salutation}}
     </div>
   </h3>
   {{#link-to "overview" current-when="overview"}} {{/link-to}} {{outlet}}

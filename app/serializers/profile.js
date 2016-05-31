@@ -9,7 +9,8 @@ export default DS.JSONAPISerializer.extend({
         attributes: {
           firstname: payload.firstname,
           lastname: payload.lastname,
-          degree: payload.degree
+          degree: payload.degree,
+          salutation: payload.salutation
         }
       }
     };

@@ -4,5 +4,6 @@ export default DS.Model.extend({
   "firstname": DS.attr('string'),
   "lastname": DS.attr('string'),
   "status": DS.attr(),
-  "defree": DS.attr()
+  "defree": DS.attr(),
+  "salutation": DS.attr()
 });
