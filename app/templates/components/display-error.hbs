@@ -1,0 +1,8 @@
+{{#if showErrors}}
+  {{#each errors as |error|}}
+    <div class="w3-row-padding w3-red w3-container">
+      {{error}}
+      </div>
+  {{/each}}
+{{/if}}  
+{{yield}}

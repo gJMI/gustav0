@@ -2,7 +2,7 @@
   <div class="w3-modal-content">
     <div class="w3-container w3-row-padding w3-section">
       <span class="w3-closebtn">{{#link-to "overview"}}<i class="fa fa-close"></i>{{/link-to}}</span>
-      <h3>Your last transactions</h3>
+      <h3>{{t "transactions.title"}}</h3>
       <ul class="w3-ul w3-hoverable w3-accordion">
         {{#each model as |pr|}}
         <li onclick="modalDisposal(this.id)" id={{pr.id}}>
