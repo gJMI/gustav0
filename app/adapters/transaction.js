@@ -7,10 +7,12 @@ export default ApplicationAdapter.extend({
     /*jshint unused:false*/   
     
     var account = query["account"];
+    var search= query["search"];
     
-    Ember.Logger.debug("account" + account);
+    Ember.Logger.debug("account: " + account);
+    Ember.Logger.debug("search: " + search);
     
-    var url = `${this.host}/api/webapi/v2/gapi/my/transactions?pageSize=25&id=${account}`;
+    var url = `${this.host}/api/webapi/v2/gapi/my/transactions?pageSize=25&id=${account}&q=${search}`;
 
     var key = this.headers["WEB-API-key"];
     var auth = this.headers["Authorization"];

@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  queryParams: {
+    search: {
+      refreshModel: true
+    }
+  },
   model(param) {
-   let query = {account: param.id};
+   let query = {account: param.id, search: param.search};
    return this.store.query('transaction', query);
   },
   beforeModel: function() {
