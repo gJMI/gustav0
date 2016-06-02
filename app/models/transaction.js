@@ -13,5 +13,10 @@ export default DS.Model.extend({
     Ember.Logger.debug("Actual balance computed");
     var pom=Math.pow(0.1,this.get('amount.precision'))*this.get('amount.value');
     return(pom.toFixed(2));
-  })
+  }),
+  "sender": DS.attr(),
+  "receiver": DS.attr(),
+  "senderName": DS.attr(),
+  "receiverName": DS.attr(),
+  "txDirection": DS.attr()
 });
