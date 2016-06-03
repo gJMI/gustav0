@@ -2,6 +2,7 @@ export default {
     "user.welcome": "Welcome <strong>{{firstname}} {{lastname}}</strong> in Gustav0",
     "transactions.title": "Your transactions",
     "transactions.reference": "Reference",
+    "transactions.nothingToDisplay": "No found transaction",
     "lang.cs": "Czech",
     "lang.en": "English",
     "app.close": "Close",

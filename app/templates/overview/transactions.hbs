@@ -15,8 +15,7 @@
         {{#each model as |pr|}}
         <li onclick="modalDisposal(this.id)" id={{pr.id}}>
           <div class="w3-container">
-            <span>{{#if (eq pr.txDirection "OUTGOING")}}{{pr.receiverName}}&emsp;&#720;&emsp;{{pr.receiver.iban}}{{/if}}
-                  {{#if (eq pr.txDirection "INCOMING")}}{{pr.senderName}}&emsp;&#720;&emsp;{{pr.sender.iban}}{{/if}}</span>
+            <span>{{pr.transactionLabel}}</span>
             <span style="float:right;">{{format-currencyNumber pr.actualBalance}} {{pr.amount.currency}}</span>
             <div name="{{pr.id}}" class="w3-accordion-content w3-container w3-animate-zoom">
               <p>SS: {{pr.specificSymbol}} KS: {{pr.constantSymbol}} VS:{{variableSymbol}}</p>
@@ -24,6 +23,8 @@
             </div>
           </div>
         </li>
+        {{else}}
+        <p>{{t "transactions.nothingToDisplay"}}</p>
         {{/each}}
       </ul>
     </div>

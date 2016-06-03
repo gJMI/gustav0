@@ -2,6 +2,7 @@ export default {
     "user.welcome": "Vítejte, <strong>{{salutation}}</strong>, v Gustav0",
     "transactions.title": "Vaše transakce",
     "transactions.reference": "Reference",
+    "transactions.nothingToDisplay": "Žádná nalezená transakce",
     "lang.cs": "Česky",
     "lang.en": "Anglicky",
     "app.close": "Zavřít",
