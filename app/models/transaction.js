@@ -22,8 +22,10 @@ export default DS.Model.extend({
     //Ember.Logger.debug("txDirection: " + this.get('txDirection'));
     var pom=null;
     if (this.get('additionalTexts.constantSymbol') === "0898") { //0898 Poplatky
-      Ember.Logger.debug(""+JSON.stringify(this.get('additionalTexts')));
       return("Poplatek "+this.get('additionalTexts.lineItems')[0]);
+    }
+    if (this.get('additionalTexts.constantSymbol') === "0989") { //0898 Poplatky
+      return("výpis - papírově na adresu v ČR");
     }
     if (this.get('txType')==="BANKFEE") {
       pom=this.get('bookingTypeTranslation');
