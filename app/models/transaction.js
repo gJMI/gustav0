@@ -35,6 +35,10 @@ export default DS.Model.extend({
       pom=this.get('bookingTypeTranslation');
       return(pom);
     }
+    if (this.get('txType')==="STANDINGORDER") {
+      pom=this.get('bookingTypeTranslation');
+      return(pom);
+    }
     if (this.get('txDirection')==="INCOMING") {
       pom=this.get('senderName');
       if (pom==="") {
