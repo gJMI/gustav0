@@ -10,6 +10,7 @@ export default {
     "app.overview": "Přehled",
     "app.about": "O aplikaci",
     "overview.link": "Řekni mi více",
+    "overview.accountBalanceTooltip": "Účetní zůstatek",
     "domestic": {
         "title": "Platební příkaz",
         "sender": "Účet odesílatele",

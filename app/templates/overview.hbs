@@ -10,7 +10,11 @@
             <span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">
             {{#if (eq account.accountno.prefix "")}}
              {{account.accountno.prefix}}-{{/if}}{{account.accountno.number}}/{{account.accountno.bankCode}}</span></p>
-          <p>{{format-currencyNumber account.actualBalance}} {{account.balance.currency}}</p>
+          <p class="w3-tooltip">{{format-currencyNumber account.actualBalance}} {{account.balance.currency}}
+            <span style="position:absolute;left:0;bottom:18px" class="w3-text w3-tag">
+            {{t "overview.accountBalanceTooltip"}}
+            </span>
+          </p>
         </div>
         <footer class="w3-container {{account.productColorClass}}">
           <h5>{{#link-to "overview.transactions" account.id}}<span>{{t "overview.link"}}</span>{{/link-to}}</h5>

@@ -10,6 +10,7 @@ export default {
     "app.overview": "Overview",
     "app.about": "About",
     "overview.link": "Tell me more",
+    "overview.accountBalanceTooltip": "Account balance",
     "domestic.title": "Payment order",
     "domestic.sender": "Sender`s account",
     "domestic.receiver": "Receiver`s account",
