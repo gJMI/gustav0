@@ -3,7 +3,7 @@
     <div class="w3-third w3-row-padding w3-section">
       <div class="w3-card-4">
         <header class="w3-container {{account.productColorClass}}">
-          <h4>{{format-productName account.productI18N}}</h4>
+          {{#link-to "overview.detail" account.id tagName="h4"}}{{format-productName account.productI18N}}{{/link-to}}
         </header>
         <div class="w3-container">
           <p class="w3-tooltip">{{format-iban account.accountno.cz-iban}}

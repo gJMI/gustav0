@@ -25,7 +25,7 @@ export default DS.Model.extend({
       return("Poplatek "+this.get('additionalTexts.lineItems')[0]);
     }
     if (this.get('additionalTexts.constantSymbol') === "0989") { //0898 Poplatky
-      return("výpis - papírově na adresu v ČR");
+      return("Výpis - papírově na adresu v ČR");
     }
     if (this.get('txType')==="BANKFEE") {
       pom=this.get('bookingTypeTranslation');

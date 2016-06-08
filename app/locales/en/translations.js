@@ -18,5 +18,12 @@ export default {
     "domestic.sendOn": "Transfer date",
     "domestic.amount": "Amount",
     "domestic.button": "Send",
-    "domestic.dropdown": "Choose from your accounts"
+    "domestic.dropdown": "Choose from your accounts",
+    "detail.title": "Account detail",
+    "detail.property": "Property",
+    "detail.value": "Value",
+    "detail.name": "Name",
+    "detail.balance": "Account balance",
+    "detail.description": "Account name",
+    "detail.alias": "Account alias"
 };

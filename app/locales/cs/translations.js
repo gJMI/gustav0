@@ -21,5 +21,12 @@ export default {
         "send": "Zaslat",
         "dropdown": "Vyberete z Vašich účtů",
         "button": "Poslat"
-    }
+    },
+    "detail.title": "Detail účtu",
+    "detail.property": "Vlastnost",
+    "detail.value": "Hodnota",
+    "detail.name": "Název",
+    "detail.balance": "Účetní zůstatek",
+    "detail.description": "Název účtu",
+    "detail.alias": "Alias účtu"
 };

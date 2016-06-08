@@ -5,7 +5,7 @@ export default DS.RESTAdapter.extend({
   host: 'http://localhost:3000',
   headers: {
     "WEB-API-key":"4d612e35-c45f-4129-b59a-5cafea9fcb6a",
-    "Authorization":"bearer 3/mfxU8hEeUVP1oytiay2tRqJDLoRY6Bz0tE5QXcgBWFpO5uVmRE0Dq6yOgq6NSaCB"
+    "Authorization":"bearer 3/Un79qnO06J4xZyzV4fQKfL39nMmYudUXg1nI009iec4IotfCGB4pN69m6iX14o8N"
   }
 });
 
