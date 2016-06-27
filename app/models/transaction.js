@@ -6,6 +6,7 @@ export default DS.Model.extend({
   "amount": DS.attr(),
   "dueDate": DS.attr('date'),
   "bookingTypeTranslation": DS.attr(),
+  "bookingType": DS.attr(),
   actualBalance: Ember.computed('amount', function () {
     Ember.Logger.debug("Actual balance computed");
     var pom=Math.pow(0.1,this.get('amount.precision'))*this.get('amount.value');
@@ -26,6 +27,21 @@ export default DS.Model.extend({
     }
     if (this.get('additionalTexts.constantSymbol') === "0989") { //0898 Poplatky
       return("Výpis - papírově na adresu v ČR");
+    }
+    if (this.get('bookingType') === "77526") {
+      return(this.get('bookingTypeTranslation'));
+    }
+     if (this.get('bookingType') === "395") { // 
+      return(this.get('bookingTypeTranslation'));
+    }
+    if (this.get('bookingType') === "1813") { // 
+      return(this.get('bookingTypeTranslation'));
+    }
+    if (this.get('bookingType') === "8") { // 
+      return(this.get('bookingTypeTranslation'));
+    }
+    if (this.get('bookingType') === "36") { // 
+      return(this.get('bookingTypeTranslation'));
     }
     if (this.get('txType')==="BANKFEE") {
       pom=this.get('bookingTypeTranslation');

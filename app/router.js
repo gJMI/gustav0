@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('detail', {path: '/detail/:id'});
   });
   this.route('about');
+  this.route('login');
 });
 
 export default Router;
