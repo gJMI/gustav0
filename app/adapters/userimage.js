@@ -38,8 +38,38 @@ export default ApplicationAdapter.extend({
 
       }, function (jqXHR) {
         jqXHR.then = null; // tame jQuery's ill mannered promises
-        Ember.run(null, reject, jqXHR);
+        Ember.Logger.debug("Problem with getting Userimage "+JSON.stringify(jqXHR));
+        //Ember.run(null, reject, jqXHR);
+        Ember.RSVP.reject(jqXHR);
       });
     });
   }
 });
+
+/*
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return new RSVP.Promise(function(resolve, reject) {
+      $.get("https://my-api.example.com/ember-model")
+      .then(resolve).fail(reject);
+    });
+  }
+});
+
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    var model1 = new RSVP.Promise(function(resolve, reject) {
+      return $.get("https://my-api.example.com/ember-model").then(resolve).fail(reject);
+    });
+    var model2 = new RSVP.Promise(function(resolve, reject) {
+      return $.get("https://my-api.example.com/ember-model2").then(resolve).fail(reject);
+    });
+
+    return RSVP.Promise.all([model1, model2])
+    .catch(function(error) {
+      console.warn(error); // I live on the edge
+      return {model1: "I still got", model2: "your back"};
+    });
+  }
+});
+*/
