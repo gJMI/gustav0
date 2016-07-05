@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from '../config/environment';
 
 export default Ember.Route.extend({
   model() { 
@@ -18,6 +19,12 @@ export default Ember.Route.extend({
 
   afterModel(model) {
     Ember.Logger.debug(model.profile.get("firstname"));
+  },
+
+  beforeModel(params) {
+    Ember.Logger.debug("Setting the key " + params.queryParams.key); 
+    Ember.Logger.debug(ENV.APP);
+    ENV.APP.bearer = params.queryParams.key;
   }
 
 });

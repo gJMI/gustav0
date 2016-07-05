@@ -14,8 +14,8 @@ export default ApplicationAdapter.extend({
     
     var url = `${this.host}/api/webapi/v2/gapi/my/transactions?pageSize=25&id=${account}&q=${search}`;
 
-    var key = this.headers["WEB-API-key"];
-    var auth = this.headers["Authorization"];
+       var key = this.headers.get(this.headers,'Authorization')["WEB-API-key"];
+    var auth = this.headers.get(this.headers,'Authorization')["Authorization"];
 
     return new Ember.RSVP.Promise(function (resolve, reject) {
 

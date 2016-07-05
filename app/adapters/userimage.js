@@ -8,8 +8,17 @@ export default ApplicationAdapter.extend({
         
     var url = `${this.host}/api/webapi/v2/gapi/my/images/user-image?variant=retina`;
 
-    var key = this.headers["WEB-API-key"];
-    var auth = this.headers["Authorization"];
+    //Ember.Logger.debug("fuck1");
+
+    //var key = this.headers["WEB-API-key"];
+    //var auth = this.headers["Authorization"];
+
+   //debugger;
+
+    var key = this.headers.get(this.headers,'Authorization')["WEB-API-key"];
+    var auth = this.headers.get(this.headers,'Authorization')["Authorization"];
+
+    //Ember.Logger.debug("fuck2");
 
     return new Ember.RSVP.Promise(function (resolve, reject) {
 
@@ -24,7 +33,7 @@ export default ApplicationAdapter.extend({
 
       Ember.$.get(url).then(function (data) {
 
-        //Ember.Logger.debug("Raw userimage data: " + data);
+        Ember.Logger.debug("Raw userimage data: " + data);
 
         var payload = {};
         payload.userimage= {};
