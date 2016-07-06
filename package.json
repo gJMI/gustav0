@@ -39,6 +39,8 @@
     "ember-i18n": "4.2.1",
     "ember-load-initializers": "^0.5.1",
     "ember-pikaday": "1.1.0",
+    "ember-query-params-reset": "0.0.2",
+    "ember-reset-query-params": "0.2.0",
     "ember-resolver": "^2.0.3",
     "ember-truth-helpers": "^1.2.0",
     "ember-validations": "^2.0.0-alpha.4",
