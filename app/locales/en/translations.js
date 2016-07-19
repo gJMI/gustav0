@@ -1,6 +1,6 @@
 export default {
     "user.welcome": "Welcome <strong>{{firstname}} {{lastname}}</strong> in Gustav0",
-     "user.profilePhoto": "Profile photo",
+    "user.profilePhoto": "Profile photo",
     "transactions.title": "Your transactions",
     "transactions.reference": "Reference",
     "transactions.nothingToDisplay": "No found transaction",

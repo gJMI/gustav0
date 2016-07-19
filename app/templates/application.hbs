@@ -21,7 +21,27 @@
     </div>
     <div class="w3-col s2 w3-center">
       <div class="w3-card-4" style="width:50%">
-        <img src="data:image/gif;base64,{{userimage.image}}" class="w3-border" alt="{{t user.profilePhoto}}">
+      <div id="userimage"></div>  
+       {{#if userimage}}
+        <img src="data:image/gif;base64,{{userimage.image}}" class="w3-border" alt="{{t 'user.profilePhoto'}}">
+      {{else}}
+      {{--debugger}}
+     <script>
+        var draw = SVG('userimage').size(92, 92);
+        var text = draw.text('{{profile.monogram}}').move(42, 5);
+        text.font({
+          family: 'Indie Flower',
+          size: 50,
+          anchor: 'middle',
+          fill: '#222223'
+        });
+        text.filter(function(add) {
+         var blur = add.offset(5, 6).in(add.sourceAlpha).gaussianBlur(5);
+         add.blend(add.source, blur);
+        });
+        draw.rect(15, 15).animate().fill('#f03').move(92, 92);
+      </script>
+      {{/if}}
       </div>
     </div>
   </div>

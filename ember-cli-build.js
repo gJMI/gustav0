@@ -8,6 +8,8 @@ module.exports = function(defaults) {
   });
 
   app.import('vendor/helper.js');
+  app.import('vendor/svg.js');
+  app.import('vendor/svg.filter.js');
   //app.import('bower_components/flag-icon-css/css/flag-icon.css');
   //app.import('bower_components/flag-icon-css/flags/4x3/cz.svg',{destDir: 'flags/4x3'});
   //app.import('bower_components/flag-icon-css/flags/4x3/us.svg',{destDir: 'flags/4x3'});

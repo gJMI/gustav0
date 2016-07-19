@@ -1,5 +1,6 @@
 export default {
     "user.welcome": "Vítejte, <strong>{{salutation}}</strong>, v Gustav0",
+    "user.profilePhoto":"Profilová fotka",
     "transactions.title": "Vaše transakce",
     "transactions.reference": "Reference",
     "transactions.nothingToDisplay": "Žádná nalezená transakce",
