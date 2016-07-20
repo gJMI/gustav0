@@ -21,7 +21,7 @@ export default DS.Model.extend({
       case 12: pom="w3-yellow";break; //card account
       case 10: pom="w3-green";break; //loan account
       case 3: pom="w3-red";break; //SPZ account
-      case 15: pom="w3-black";break; //mortage
+      case 15: pom="w3-lime";break; //mortage
     }
     return(pom);
   })
