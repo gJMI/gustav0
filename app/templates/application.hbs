@@ -20,7 +20,7 @@
       </div></h3>
     </div>
     <div class="w3-col s2 w3-center">
-      <div class="w3-card-4" style="width:50%">
+      <div class="w3-card-4" style="height:90px;width:90px">
       <div id="userimage"></div>  
        {{#if userimage}}
         <img src="data:image/gif;base64,{{userimage.image}}" class="w3-border" alt="{{t 'user.profilePhoto'}}">
@@ -38,6 +38,7 @@
         text.filter(function(add) {
          var blur = add.offset(5, 6).in(add.sourceAlpha).gaussianBlur(5);
          add.blend(add.source, blur);
+        this.size('200','200').move('-50', '-50')
         });
         draw.rect(15, 15).animate().fill('#f03').move(92, 92);
       </script>

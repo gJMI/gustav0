@@ -2,8 +2,9 @@
   {{#each model as |account|}}
     <div class="w3-third w3-row-padding w3-section">
       <div class="w3-card-4">
-        <header class="w3-container {{account.productColorClass}}">
-          {{#link-to "overview.detail" account.id tagName="h4"}}{{format-productName account.productI18N}}{{/link-to}}
+        <header class="w3-container {{account.productColorClass}} w3-tooltip">          
+          {{#link-to "overview.detail" account.id tagName="h4"}} {{#if account.alias}}{{format-productName account.alias}}{{else}}{{format-productName account.productI18N}}{{/if}}{{/link-to}}
+          <span style="position:absolute;left:5;bottom:20px" class="w3-text w3-tag">{{account.productI18N}}</span>
         </header>
         <div class="w3-container">
           <p class="w3-tooltip">{{format-iban account.accountno.cz-iban}}

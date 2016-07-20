@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'gustav0',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     i18n: {
       defaultLocale: 'cs'
@@ -25,15 +25,16 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
      //ENV.APP.LOG_RESOLVER = true;
-     //ENV.APP.LOG_ACTIVE_GENERATION = true;
+     ENV.APP.LOG_ACTIVE_GENERATION = true;
      ENV.APP.LOG_TRANSITIONS = true;
      //ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-     //ENV.APP.LOG_VIEW_LOOKUPS = true;
+     ENV.APP.LOG_VIEW_LOOKUPS = true;
+     ENV.APP.LOG_BINDINGS = true;
   }
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.rootURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
