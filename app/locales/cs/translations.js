@@ -10,6 +10,7 @@ export default {
     "app.paymentOrder": "Platební příkaz",
     "app.overview": "Přehled",
     "app.about": "O aplikaci",
+    "app.loading": "Nahrávám data…",
     "overview.link": "Řekni mi více",
     "overview.accountBalanceTooltip": "Účetní zůstatek",
     "domestic": {

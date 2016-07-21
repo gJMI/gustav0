@@ -10,6 +10,7 @@ export default {
     "app.paymentOrder": "Payment order",
     "app.overview": "Overview",
     "app.about": "About",
+    "app.loading": "Loading data…",
     "overview.link": "Tell me more",
     "overview.accountBalanceTooltip": "Account balance",
     "domestic.title": "Payment order",

@@ -20,7 +20,7 @@ loadInitializers(App, config.modulePrefix);
 //};
 
 Ember.RSVP.on('error', function (error) {
-  console.log('Ember.RSVP error handler', error);
+  console.log('Error happens: Ember.RSVP error handler', error);
   //App.get('router').transitionTo('error');
   //window.location.replace("/error");
 });
