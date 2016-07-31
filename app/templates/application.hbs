@@ -36,11 +36,14 @@
           fill: '#222223'
         });
         text.filter(function(add) {
-         var blur = add.offset(5, 6).in(add.sourceAlpha).gaussianBlur(5);
-         add.blend(add.source, blur);
-        this.size('200','200').move('-50', '-50')
+          var blur = add.offset(5, 6).in(add.sourceAlpha).gaussianBlur(5);
+          add.blend(add.source, blur);
+          this.size('200','200').move('-50', '-50')
         });
-        draw.rect(15, 15).animate().fill('#f03').move(92, 92);
+        draw.click(function() {
+          draw.rect(15, 15).animate().fill('#f03').move(92, 92);
+          this.text.draw.text('FCK').move(42, 5).animate().rotate(180,200,100);  
+        });
       </script>
       {{/if}}
       </div>
